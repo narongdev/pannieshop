@@ -1,0 +1,7 @@
+.carousel-inner{
+  height: 70vh;
+  background-color: whitesmoke;
+}
+.carousel-item{
+  padding: 30px;
+}
