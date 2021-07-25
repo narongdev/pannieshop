@@ -23,7 +23,9 @@ class FrontController extends Controller
             $ipAddress = $request->ip();
             session(['sessionIP' => $ipAddress]);
         }
-        session(['sessionCart' => $this->inCart()]);
+        if(!session()->has('sessionCart')){
+            session(['sessionCart' => $this->inCart()]);
+        }
 
         /////////////////// All Catagory /////////////////////
         $Catagory = Catagory::where('status', '=', 'enable')
